@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation incluse depuis base.html -->
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar Profile -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="position-relative d-inline-block mb-3">
+                            <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;" alt="Photo de profil">
+                            <label for="profile-photo" class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle p-2" style="cursor: pointer;">
+                                <i class="fas fa-camera"></i>
+                            </label>
+                            <input type="file" id="profile-photo" class="d-none" accept="image/*">
+                        </div>
+                        <h4 class="mb-0">John Doe</h4>
+                        <p class="text-muted">Travailleur</p>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-1">(4.5)</span>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-outline-primary mb-2">
+                                <i class="fas fa-edit"></i> Modifier le profil
+                            </button>
+                            <button class="btn btn-outline-success">
+                                <i class="fas fa-envelope"></i> Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistiques -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Statistiques</h5>
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6>Missions</h6>
+                                <p class="h4">45</p>
+                            </div>
+                            <div class="col-4">
+                                <h6>Avis</h6>
+                                <p class="h4">38</p>
+                            </div>
+                            <div class="col-4">
+                                <h6>Points</h6>
+                                <p class="h4">850</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disponibilité -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Disponibilité</h5>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="disponibility" checked>
+                            <label class="form-check-label" for="disponibility">Disponible pour des missions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <!-- Informations personnelles -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Informations personnelles</h5>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Nom complet</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Téléphone</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">(+123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Adresse</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">123 Rue Example, Ville, Pays</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Compétences</h5>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-2 mb-2">Plomberie</span>
+                            <span class="badge bg-primary me-2 mb-2">Électricité</span>
+                            <span class="badge bg-primary me-2 mb-2">Menuiserie</span>
+                            <span class="badge bg-primary me-2 mb-2">Peinture</span>
+                            <span class="badge bg-primary me-2 mb-2">Jardinage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expérience -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Expérience</h5>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2020 - Présent</div>
+                                <div class="timeline-content">
+                                    <h6>Plombier indépendant</h6>
+                                    <p>Installation et réparation de systèmes de plomberie pour particuliers et entreprises.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2015 - 2020</div>
+                                <div class="timeline-content">
+                                    <h6>Technicien en maintenance</h6>
+                                    <p>Maintenance générale et réparations diverses pour une société immobilière.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galerie de travaux -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Galerie de travaux</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <img src="static/images/photo_2025-01-30_13-15-31.jpg" class="img-fluid rounded" alt="Travail 1">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="static/images/photo_2025-01-30_13-15-42.jpg" class="img-fluid rounded" alt="Travail 2">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="static/images/photo_2025-01-30_13-15-52.jpg" class="img-fluid rounded" alt="Travail 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avis des clients -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Avis des clients</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Avis 1 -->
+                        <div class="d-flex mb-4">
+                            <img src="static/images/photo_2025-01-30_13-15-59.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" alt="Client">
+                            <div>
+                                <h6 class="mb-1">Marie Dupont</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-1">Excellent travail, très professionnel et ponctuel.</p>
+                                <small class="text-muted">Il y a 2 jours</small>
+                            </div>
+                        </div>
+                        <!-- Avis 2 -->
+                        <div class="d-flex">
+                            <img src="static/images/photo_2025-01-30_13-16-06.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" alt="Client">
+                            <div>
+                                <h6 class="mb-1">Pierre Martin</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="mb-1">Service rapide et efficace. Je recommande!</p>
+                                <small class="text-muted">Il y a 1 semaine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer inclus depuis base.html -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

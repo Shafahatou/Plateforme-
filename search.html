@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-handshake"></i> LaVie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search.html">
+                            <i class="fas fa-search"></i> Rechercher
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-tools"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">
+                            <i class="fas fa-comments"></i> Forum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            <i class="fas fa-user-plus"></i> Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <!-- Barre de recherche -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="advanced-search-form">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Rechercher un service...">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option value="">Catégorie</option>
+                                        <option value="plomberie">Plomberie</option>
+                                        <option value="electricite">Électricité</option>
+                                        <option value="menuiserie">Menuiserie</option>
+                                        <option value="peinture">Peinture</option>
+                                        <option value="jardinage">Jardinage</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Localisation">
+                                        <button class="btn btn-outline-secondary" type="button" id="get-location">
+                                            <i class="fas fa-crosshairs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+                                </div>
+                            </div>
+
+                            <!-- Filtres avancés -->
+                            <div class="collapse mt-3" id="advancedFilters">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Prix</label>
+                                        <select class="form-select">
+                                            <option value="">Tous les prix</option>
+                                            <option value="low">0 - 50€</option>
+                                            <option value="medium">50€ - 100€</option>
+                                            <option value="high">100€+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Notation</label>
+                                        <select class="form-select">
+                                            <option value="">Toutes les notes</option>
+                                            <option value="4">4+ étoiles</option>
+                                            <option value="3">3+ étoiles</option>
+                                            <option value="2">2+ étoiles</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Disponibilité</label>
+                                        <select class="form-select">
+                                            <option value="">Toutes les disponibilités</option>
+                                            <option value="now">Disponible maintenant</option>
+                                            <option value="today">Disponible aujourd'hui</option>
+                                            <option value="week">Disponible cette semaine</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Expérience</label>
+                                        <select class="form-select">
+                                            <option value="">Toute expérience</option>
+                                            <option value="1">1+ an</option>
+                                            <option value="3">3+ ans</option>
+                                            <option value="5">5+ ans</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#advancedFilters">
+                                    Filtres avancés <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Résultats de recherche -->
+        <div class="row">
+            <!-- Carte des résultats -->
+            <div class="col-lg-7 mb-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">12 résultats trouvés</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    Trier par
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Pertinence</a></li>
+                                    <li><a class="dropdown-item" href="#">Note</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix croissant</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix décroissant</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Liste des travailleurs -->
+                        <div class="worker-list">
+                            <!-- Travailleur 1 -->
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="static/assets/worker1.jpg" alt="Travailleur" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h5 class="mb-1">Jean Dupont</h5>
+                                                    <p class="text-muted mb-2">Plombier</p>
+                                                </div>
+                                                <span class="badge bg-success">Disponible</span>
+                                            </div>
+                                            <div class="mb-2">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                                <span class="ms-1">(4.5)</span>
+                                            </div>
+                                            <p class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2"></i>Paris, France</p>
+                                            <p class="mb-3">Spécialisé dans la plomberie résidentielle et commerciale. Plus de 10 ans d'expérience.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <span class="text-primary fw-bold">50€/h</span>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                                        <i class="fas fa-envelope"></i> Contacter
+                                                    </button>
+                                                    <button class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-calendar-alt"></i> Réserver
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Travailleur 2 -->
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="static/assets/worker2.jpg" alt="Travailleur" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h5 class="mb-1">Marie Martin</h5>
+                                                    <p class="text-muted mb-2">Électricienne</p>
+                                                </div>
+                                                <span class="badge bg-warning">Occupé</span>
+                                            </div>
+                                            <div class="mb-2">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="far fa-star text-warning"></i>
+                                                <span class="ms-1">(4.0)</span>
+                                            </div>
+                                            <p class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2"></i>Lyon, France</p>
+                                            <p class="mb-3">Électricienne certifiée avec expertise en installations domestiques et dépannage.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <span class="text-primary fw-bold">45€/h</span>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                                        <i class="fas fa-envelope"></i> Contacter
+                                                    </button>
+                                                    <button class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-calendar-alt"></i> Réserver
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plus de résultats... -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-outline-primary">
+                                    Charger plus de résultats
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div id="map" style="height: 600px; background-color: #eee;">
+                            <!-- Intégration de Google Maps ici -->
+                            <div class="text-center py-5">
+                                <i class="fas fa-map-marked-alt fa-4x text-muted mb-3"></i>
+                                <p class="text-muted">Carte interactive des travailleurs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>À propos de LaVie</h5>
+                    <p>Plateforme de mise en relation entre travailleurs informels et employeurs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">À propos</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="faq.html" class="text-light">FAQ</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="terms.html" class="text-light">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-light">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2025 LaVie. Tous droits réservés.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

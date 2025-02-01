@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagerie - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .chat-container {
+            height: calc(100vh - 200px);
+            min-height: 500px;
+        }
+        .chat-list {
+            height: 100%;
+            overflow-y: auto;
+            border-right: 1px solid #dee2e6;
+        }
+        .chat-messages {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .message-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        .message {
+            max-width: 75%;
+            margin-bottom: 1rem;
+        }
+        .message-sent {
+            margin-left: auto;
+        }
+        .message-received {
+            margin-right: auto;
+        }
+        .chat-input {
+            border-top: 1px solid #dee2e6;
+            padding: 1rem;
+            background-color: #fff;
+        }
+        .chat-item {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .chat-item:hover {
+            background-color: #f8f9fa;
+        }
+        .chat-item.active {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation incluse depuis base.html -->
+
+    <div class="container-fluid py-4">
+        <div class="card chat-container">
+            <div class="card-body p-0">
+                <div class="row g-0">
+                    <!-- Liste des conversations -->
+                    <div class="col-md-4 col-lg-3 chat-list">
+                        <div class="p-3 border-bottom">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Rechercher une conversation...">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Conversations -->
+                        <div class="contacts">
+                            <!-- Contact 1 -->
+                            <div class="d-flex align-items-center p-3 border-bottom contact active">
+                                <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle me-3" style="width: 48px; height: 48px; object-fit: cover;" alt="Contact">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Jean Dupont</h6>
+                                    <p class="text-muted small mb-0">Plombier professionnel</p>
+                                </div>
+                                <div class="text-end">
+                                    <small class="text-muted">14:22</small>
+                                    <span class="badge bg-primary rounded-pill ms-2">2</span>
+                                </div>
+                            </div>
+
+                            <!-- Contact 2 -->
+                            <div class="d-flex align-items-center p-3 border-bottom contact">
+                                <img src="static/images/photo_2025-01-30_13-15-59.jpg" class="rounded-circle me-3" style="width: 48px; height: 48px; object-fit: cover;" alt="Contact">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Marie Dupont</h6>
+                                    <p class="text-muted small mb-0">Électricienne</p>
+                                </div>
+                                <div class="text-end">
+                                    <small class="text-muted">Hier</small>
+                                </div>
+                            </div>
+
+                            <!-- Contact 3 -->
+                            <div class="d-flex align-items-center p-3 contact">
+                                <img src="static/images/photo_2025-01-30_13-16-06.jpg" class="rounded-circle me-3" style="width: 48px; height: 48px; object-fit: cover;" alt="Contact">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Pierre Martin</h6>
+                                    <p class="text-muted small mb-0">Jardinier</p>
+                                </div>
+                                <div class="text-end">
+                                    <small class="text-muted">Lun</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone de chat -->
+                    <div class="col-md-8 col-lg-9 chat-messages">
+                        <!-- En-tête du chat -->
+                        <div class="p-3 border-bottom">
+                            <div class="d-flex align-items-center">
+                                <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle me-3" style="width: 48px; height: 48px; object-fit: cover;" alt="Contact">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-0">Jean Dupont</h5>
+                                    <p class="mb-0 text-muted small">
+                                        <i class="fas fa-circle text-success me-1"></i> En ligne
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-light me-2" data-bs-toggle="tooltip" title="Appel vidéo">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                    <button class="btn btn-light me-2" data-bs-toggle="tooltip" title="Appel audio">
+                                        <i class="fas fa-phone"></i>
+                                    </button>
+                                    <button class="btn btn-light" data-bs-toggle="tooltip" title="Plus d'options">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Messages -->
+                        <div class="chat-messages p-4">
+                            <!-- Message reçu -->
+                            <div class="message-received mb-3">
+                                <div class="d-flex">
+                                    <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle me-2" style="width: 36px; height: 36px; object-fit: cover;" alt="Contact">
+                                    <div>
+                                        <div class="bg-light rounded p-3">
+                                            <p class="mb-0">Bonjour, je suis disponible demain pour la réparation.</p>
+                                        </div>
+                                        <small class="text-muted">14:20</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message envoyé -->
+                            <div class="message-sent text-end mb-3">
+                                <div class="d-flex justify-content-end">
+                                    <div class="text-end">
+                                        <div class="bg-primary text-white rounded p-3">
+                                            <p class="mb-0">Parfait ! À quelle heure pouvez-vous passer ?</p>
+                                        </div>
+                                        <small class="text-muted">14:21</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message reçu -->
+                            <div class="message-received mb-3">
+                                <div class="d-flex">
+                                    <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle me-2" style="width: 36px; height: 36px; object-fit: cover;" alt="Contact">
+                                    <div>
+                                        <div class="bg-light rounded p-3">
+                                            <p class="mb-0">Je peux être chez vous vers 10h. Cela vous convient ?</p>
+                                        </div>
+                                        <small class="text-muted">14:22</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zone de saisie -->
+                        <div class="chat-input">
+                            <form id="message-form" class="d-flex align-items-center">
+                                <button type="button" class="btn btn-light me-2" data-bs-toggle="tooltip" title="Joindre un fichier">
+                                    <i class="fas fa-paperclip"></i>
+                                </button>
+                                <input type="text" class="form-control me-2" placeholder="Écrivez votre message...">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer inclus depuis base.html -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+        // Initialiser les tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // Faire défiler automatiquement vers le bas de la conversation
+        function scrollToBottom() {
+            const messageList = document.querySelector('.message-list');
+            messageList.scrollTop = messageList.scrollHeight;
+        }
+
+        // Appeler la fonction au chargement
+        scrollToBottom();
+
+        // Gérer l'envoi de messages
+        document.getElementById('message-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = this.querySelector('input');
+            const message = input.value.trim();
+            
+            if (message) {
+                // Ici, vous ajouteriez normalement le code pour envoyer le message au serveur
+                // Pour l'exemple, nous ajoutons simplement le message à l'interface
+                const messageList = document.querySelector('.message-list');
+                const messageHTML = `
+                    <div class="message message-sent">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <p class="mb-0">${message}</p>
+                            </div>
+                        </div>
+                        <small class="text-muted text-end">À l'instant</small>
+                    </div>
+                `;
+                messageList.insertAdjacentHTML('beforeend', messageHTML);
+                input.value = '';
+                scrollToBottom();
+            }
+        });
+    </script>
+</body>
+</html>
