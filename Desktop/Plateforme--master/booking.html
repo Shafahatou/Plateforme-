@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Navigation incluse depuis base.html -->
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- Formulaire de réservation -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4">Réserver un service</h2>
+                        
+                        <form id="booking-form">
+                            <!-- Type de service -->
+                            <div class="mb-4">
+                                <label class="form-label">Type de service</label>
+                                <select class="form-select" required>
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="plomberie">Plomberie</option>
+                                    <option value="electricite">Électricité</option>
+                                    <option value="menuiserie">Menuiserie</option>
+                                    <option value="peinture">Peinture</option>
+                                    <option value="jardinage">Jardinage</option>
+                                    <option value="menage">Ménage</option>
+                                </select>
+                            </div>
+
+                            <!-- Description du travail -->
+                            <div class="mb-4">
+                                <label class="form-label">Description du travail à effectuer</label>
+                                <textarea class="form-control" rows="4" placeholder="Décrivez en détail le travail à réaliser..." required></textarea>
+                            </div>
+
+                            <!-- Date et heure -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Date souhaitée</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Heure souhaitée</label>
+                                    <input type="time" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Durée estimée -->
+                            <div class="mb-4">
+                                <label class="form-label">Durée estimée</label>
+                                <select class="form-select" required>
+                                    <option value="">Sélectionnez la durée</option>
+                                    <option value="1">1 heure</option>
+                                    <option value="2">2 heures</option>
+                                    <option value="3">3 heures</option>
+                                    <option value="4">4 heures</option>
+                                    <option value="5">5 heures</option>
+                                    <option value="full">Journée complète</option>
+                                </select>
+                            </div>
+
+                            <!-- Adresse -->
+                            <div class="mb-4">
+                                <label class="form-label">Adresse d'intervention</label>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control" placeholder="Entrez l'adresse" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="get-location">
+                                        <i class="fas fa-crosshairs"></i>
+                                    </button>
+                                </div>
+                                <div id="map" style="height: 200px; background-color: #eee;" class="mt-2">
+                                    <!-- La carte sera chargée ici -->
+                                </div>
+                            </div>
+
+                            <!-- Photos -->
+                            <div class="mb-4">
+                                <label class="form-label">Photos (optionnel)</label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" multiple accept="image/*">
+                                </div>
+                                <small class="text-muted">Ajoutez des photos pour mieux décrire le travail à réaliser</small>
+                            </div>
+
+                            <!-- Instructions particulières -->
+                            <div class="mb-4">
+                                <label class="form-label">Instructions particulières (optionnel)</label>
+                                <textarea class="form-control" rows="3" placeholder="Parking, code d'accès, etc..."></textarea>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <!-- Options de paiement -->
+                            <h5 class="mb-4">Mode de paiement</h5>
+                            <div class="mb-4">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="payment" id="card" checked>
+                                    <label class="form-check-label" for="card">
+                                        <i class="fas fa-credit-card me-2"></i>
+                                        Carte bancaire
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="payment" id="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        <i class="fab fa-paypal me-2"></i>
+                                        PayPal
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="cash">
+                                    <label class="form-check-label" for="cash">
+                                        <i class="fas fa-money-bill-wave me-2"></i>
+                                        Espèces
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Confirmer la réservation
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résumé de la réservation -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Résumé de la réservation</h5>
+                        
+                        <!-- Prestataire -->
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="/static/assets/worker1.jpg" alt="Prestataire" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-1">Jean Dupont</h6>
+                                <p class="mb-0 text-muted">Plombier</p>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-muted ms-1">(4.5)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Détails -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Date</span>
+                                <span class="text-muted">12 février 2024</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Heure</span>
+                                <span class="text-muted">09:00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Durée estimée</span>
+                                <span class="text-muted">2 heures</span>
+                            </div>
+                        </div>
+
+                        <!-- Tarifs -->
+                        <div class="mb-4">
+                            <h6 class="mb-3">Tarifs</h6>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Taux horaire</span>
+                                <span>50€/h</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Durée estimée</span>
+                                <span>2h</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Frais de déplacement</span>
+                                <span>10€</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <span>Total estimé</span>
+                                <span>110€</span>
+                            </div>
+                        </div>
+
+                        <!-- Garanties -->
+                        <div class="mb-4">
+                            <h6 class="mb-3">Garanties LaVie</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-shield-alt text-success me-2"></i>
+                                    Prestataire vérifié
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-hand-holding-usd text-success me-2"></i>
+                                    Paiement sécurisé
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-undo text-success me-2"></i>
+                                    Satisfaction garantie
+                                </li>
+                                <li>
+                                    <i class="fas fa-headset text-success me-2"></i>
+                                    Support 24/7
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Politique d'annulation -->
+                        <div>
+                            <h6 class="mb-3">Politique d'annulation</h6>
+                            <p class="small text-muted mb-0">
+                                Annulation gratuite jusqu'à 24h avant le rendez-vous. Des frais peuvent s'appliquer en cas d'annulation tardive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer inclus depuis base.html -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Validation du formulaire
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Ici, ajoutez la logique de validation et de soumission du formulaire
+            alert('Réservation confirmée ! Vous allez recevoir un email de confirmation.');
+        });
+
+        // Géolocalisation
+        document.getElementById('get-location').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // Ici, vous pouvez utiliser les coordonnées pour mettre à jour la carte
+                    console.log(position.coords.latitude, position.coords.longitude);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

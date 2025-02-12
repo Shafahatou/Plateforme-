@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation incluse depuis base.html -->
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4">Nos Services</h1>
+                    <p class="lead">Découvrez tous les services proposés par nos travailleurs qualifiés</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="/register?type=worker" class="btn btn-outline-light btn-lg">
+                        Devenir prestataire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catégories de services -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Plomberie -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/images/photo_2025-01-30_13-15-31.jpg" class="card-img-top" alt="Plomberie" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-wrench text-primary me-2"></i>
+                                Plomberie
+                            </h5>
+                            <p class="card-text">Installation, réparation et maintenance de systèmes de plomberie pour particuliers et professionnels.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Réparation de fuites</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Installation sanitaire</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Débouchage</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Chauffe-eau</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=plomberie" class="btn btn-primary">
+                                    Trouver un plombier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Électricité -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/images/photo_2025-01-30_13-15-42.jpg" class="card-img-top" alt="Électricité" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-bolt text-primary me-2"></i>
+                                Électricité
+                            </h5>
+                            <p class="card-text">Services d'installation électrique, dépannage et mise aux normes par des professionnels certifiés.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Installation électrique</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Dépannage</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Mise aux normes</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Éclairage</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=electricite" class="btn btn-primary">
+                                    Trouver un électricien
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menuiserie -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/assets/carpentry.jpg" class="card-img-top" alt="Menuiserie" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-hammer text-primary me-2"></i>
+                                Menuiserie
+                            </h5>
+                            <p class="card-text">Travaux de menuiserie sur mesure, réparation et installation de mobilier.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Meubles sur mesure</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Portes et fenêtres</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Parquet</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Aménagement</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=menuiserie" class="btn btn-primary">
+                                    Trouver un menuisier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peinture -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/assets/painting.jpg" class="card-img-top" alt="Peinture" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-paint-roller text-primary me-2"></i>
+                                Peinture
+                            </h5>
+                            <p class="card-text">Services de peinture intérieure et extérieure pour rafraîchir votre espace.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Peinture intérieure</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Peinture extérieure</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Papier peint</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Décoration</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=peinture" class="btn btn-primary">
+                                    Trouver un peintre
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jardinage -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/images/photo_2025-01-30_13-15-52.jpg" class="card-img-top" alt="Jardinage" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-leaf text-primary me-2"></i>
+                                Jardinage
+                            </h5>
+                            <p class="card-text">Entretien et aménagement de jardins par des professionnels passionnés.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Tonte de pelouse</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Taille de haies</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Plantation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Aménagement</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=jardinage" class="btn btn-primary">
+                                    Trouver un jardinier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ménage -->
+                <div class="col-md-4">
+                    <div class="card h-100 service-card">
+                        <img src="static/assets/cleaning.jpg" class="card-img-top" alt="Ménage" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-broom text-primary me-2"></i>
+                                Ménage
+                            </h5>
+                            <p class="card-text">Services de nettoyage professionnel pour particuliers et entreprises.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Ménage régulier</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Nettoyage ponctuel</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vitres</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Bureaux</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="/search?category=menage" class="btn btn-primary">
+                                    Trouver un agent d'entretien
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Comment ça marche ?</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-search fa-2x"></i>
+                        </div>
+                        <h4>1. Recherchez</h4>
+                        <p>Trouvez le service dont vous avez besoin</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-user-check fa-2x"></i>
+                        </div>
+                        <h4>2. Choisissez</h4>
+                        <p>Sélectionnez le prestataire qui vous convient</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-calendar-check fa-2x"></i>
+                        </div>
+                        <h4>3. Réservez</h4>
+                        <p>Planifiez votre rendez-vous</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-star fa-2x"></i>
+                        </div>
+                        <h4>4. Évaluez</h4>
+                        <p>Donnez votre avis sur le service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bannière CTA -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>Vous êtes un professionnel ?</h2>
+                    <p class="lead mb-0">Rejoignez notre plateforme et développez votre activité</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="/register?type=worker" class="btn btn-light btn-lg">
+                        S'inscrire comme prestataire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer inclus depuis base.html -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-handshake"></i> LaVie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="fas fa-search"></i> Rechercher
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-tools"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">
+                            <i class="fas fa-comments"></i> Forum
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paiement.html">
+                            <i class="fas fa-credit-card"></i> Paiement
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="historique.html">
+                            <i class="fas fa-history"></i> Historique
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            <i class="fas fa-user-plus"></i> Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Informations de contact -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Nos coordonnées</h5>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-map-marker-alt text-primary me-2"></i>Adresse</h6>
+                            <p class="text-muted">123 Rue de la République<br>75001 Paris, France</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-phone text-primary me-2"></i>Téléphone</h6>
+                            <p class="text-muted">+33 1 23 45 67 89</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-envelope text-primary me-2"></i>Email</h6>
+                            <p class="text-muted">contact@lavie.fr</p>
+                        </div>
+                        <div>
+                            <h6><i class="fas fa-clock text-primary me-2"></i>Horaires</h6>
+                            <p class="text-muted mb-0">Lundi - Vendredi : 9h00 - 18h00<br>Samedi : 9h00 - 12h00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Envoyez-nous un message</h5>
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nom</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Prénom</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Sujet</label>
+                                <select class="form-select" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="general">Question générale</option>
+                                    <option value="service">Question sur un service</option>
+                                    <option value="technical">Support technique</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane me-2"></i>Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>À propos de LaVie</h5>
+                    <p>LaVie est une plateforme de mise en relation entre particuliers et professionnels pour tous types de services.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 LaVie. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="terms.html" class="text-light me-3">Conditions d'utilisation</a>
+                    <a href="privacy.html" class="text-light">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

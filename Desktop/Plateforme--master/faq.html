@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - LaVie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-handshake"></i> LaVie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="fas fa-search"></i> Rechercher
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-tools"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">
+                            <i class="fas fa-comments"></i> Forum
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            <i class="fas fa-user-plus"></i> Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>Foire Aux Questions</h1>
+                    <p class="lead mb-0">Trouvez les réponses à vos questions les plus fréquentes</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Rechercher une question...">
+                        <button class="btn btn-light" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <!-- Catégories de FAQ -->
+        <div class="row mb-5">
+            <div class="col-md-3 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-user-circle fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Compte</h5>
+                        <p class="card-text">Questions sur votre compte et profil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Services</h5>
+                        <p class="card-text">Informations sur nos services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Paiements</h5>
+                        <p class="card-text">Questions sur les paiements</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Sécurité</h5>
+                        <p class="card-text">Sécurité et confidentialité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions fréquentes -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <!-- Compte -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Comment créer un compte sur LaVie ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour créer un compte sur LaVie, cliquez sur le bouton "S'inscrire" en haut à droite de la page. Choisissez votre type de compte (travailleur ou employeur), remplissez le formulaire avec vos informations personnelles et validez votre inscription. Vous recevrez un email de confirmation pour activer votre compte.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Comment modifier mes informations personnelles ?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Connectez-vous à votre compte, accédez à votre profil en cliquant sur votre nom d'utilisateur, puis cliquez sur "Modifier le profil". Vous pourrez alors mettre à jour vos informations personnelles, compétences et autres détails.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Comment réserver un service ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour réserver un service, recherchez le prestataire qui vous convient, consultez son profil et ses disponibilités, puis cliquez sur "Réserver". Remplissez le formulaire de réservation en précisant vos besoins et préférences de date/heure.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Comment annuler une réservation ?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour annuler une réservation, accédez à la section "Mes réservations" dans votre compte et cliquez sur "Annuler" pour la réservation concernée. Notez que des frais peuvent s'appliquer en cas d'annulation tardive (moins de 24h avant le rendez-vous).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paiements -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Quels sont les modes de paiement acceptés ?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nous acceptons les paiements par carte bancaire (Visa, Mastercard), PayPal et en espèces. Pour votre sécurité, nous recommandons d'utiliser les paiements en ligne via notre plateforme.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                Comment sont gérés les remboursements ?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                En cas d'annulation éligible ou de problème avec le service, les remboursements sont traités sous 5-10 jours ouvrés. Le montant est recrédité sur le mode de paiement utilisé lors de la réservation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sécurité -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                Comment sont protégées mes données personnelles ?
+                            </button>
+                        </h2>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Vos données personnelles sont protégées conformément au RGPD. Nous utilisons un cryptage SSL pour sécuriser vos informations et ne partageons jamais vos données avec des tiers sans votre consentement.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                Comment signaler un problème ?
+                            </button>
+                        </h2>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour signaler un problème, contactez notre service client via le formulaire de contact, par email à support@lavie.com ou par téléphone au +123 456 789. Notre équipe est disponible 24/7 pour vous aider.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pas trouvé votre réponse ? -->
+                <div class="text-center mt-5">
+                    <h4>Vous n'avez pas trouvé votre réponse ?</h4>
+                    <p class="mb-4">Notre équipe de support est là pour vous aider</p>
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="fas fa-envelope me-2"></i>
+                        Contactez-nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>À propos de LaVie</h5>
+                    <p>Plateforme de mise en relation entre travailleurs informels et employeurs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">À propos</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="faq.html" class="text-light">FAQ</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="terms.html" class="text-light">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-light">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2025 LaVie. Tous droits réservés.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

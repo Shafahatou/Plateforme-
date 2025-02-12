@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaVie - Plateforme de Recrutement et Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-handshake"></i> LaVie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="fas fa-search"></i> Rechercher
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-tools"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">
+                            <i class="fas fa-comments"></i> Forum
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paiement.html">
+                            <i class="fas fa-credit-card"></i> Paiement
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="historique.html">
+                            <i class="fas fa-history"></i> Historique
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            <i class="fas fa-user-plus"></i> Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Trouvez le bon professionnel pour vos besoins</h1>
+            <p class="lead">Plateforme de mise en relation entre travailleurs informels et employeurs</p>
+            <div class="mt-4">
+                <a href="register.html" class="btn btn-light btn-lg me-3">S'inscrire</a>
+                <a href="search.html" class="btn btn-outline-light btn-lg">Rechercher un service</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nos Services Populaires</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="static/images/plombier.jpg" class="card-img-top" alt="Plomberie">
+                        <div class="card-body">
+                            <h5 class="card-title">Plomberie</h5>
+                            <p class="card-text">Services de plomberie professionnels pour tous vos besoins.</p>
+                            <a href="services.html#plumbing" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="static/images/electricien.jpg" class="card-img-top" alt="Électricité">
+                        <div class="card-body">
+                            <h5 class="card-title">Électricité</h5>
+                            <p class="card-text">Installation et réparation électrique en toute sécurité.</p>
+                            <a href="services.html#electricity" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="static/images/jardinier.jpg" class="card-img-top" alt="Jardinage">
+                        <div class="card-body">
+                            <h5 class="card-title">Jardinage</h5>
+                            <p class="card-text">Entretien professionnel de votre jardin.</p>
+                            <a href="services.html#gardening" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Pourquoi nous choisir ?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h4>Professionnels vérifiés</h4>
+                        <p>Tous nos prestataires sont soigneusement sélectionnés et vérifiés.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h4>Service rapide</h4>
+                        <p>Trouvez un professionnel disponible en quelques clics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-hand-holding-usd fa-3x text-primary mb-3"></i>
+                        <h4>Prix transparents</h4>
+                        <p>Des tarifs clairs et compétitifs sans surprise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Témoignages</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"Service excellent et professionnel. Je recommande vivement !"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="static/images/photo_2025-01-30_13-15-59.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                                <div>
+                                    <h6 class="mb-0">Marie Dupont</h6>
+                                    <small class="text-muted">Client satisfait</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"Rapide, efficace et très professionnel. Je suis très satisfait."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="static/images/photo_2025-01-30_13-16-06.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                                <div>
+                                    <h6 class="mb-0">Jean Martin</h6>
+                                    <small class="text-muted">Client satisfait</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"Une plateforme qui m'a permis de développer mon activité."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="static/images/photo_2025-01-30_13-16-16.jpg" class="rounded-circle me-3" width="50" alt="Travailleur">
+                                <div>
+                                    <h6 class="mb-0">Pierre Dubois</h6>
+                                    <small class="text-muted">Plombier professionnel</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>À propos de LaVie</h5>
+                    <p>Plateforme de mise en relation entre travailleurs informels et employeurs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">À propos</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="faq.html" class="text-light">FAQ</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="terms.html" class="text-light">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-light">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2024 LaVie. Tous droits réservés.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
